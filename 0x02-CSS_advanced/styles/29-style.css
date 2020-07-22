@@ -95,15 +95,15 @@ a:active {
     background-color: var(--color-light-grey);
 }
 
-.header{
+.header {
     padding: var(--header-padding);
 }
 
-.header-logo{
+.header-logo {
     position: var(--header-logo-position);
 }
 
-.header-logo a{
+.header-logo a {
     display: var(--header-logo-link-display);
     position: var(--header-logo-position);
     top: var(--header-logo-link-top);
@@ -146,16 +146,17 @@ a:active {
     margin: var(--nav-item-margin);
 }
 
-.nav .nav-link {
-    display: block;
-    padding: 0.5rem 1rem;
-}
 
 .nav .nav-link:hover {
     color: var(--nav-item-link-hover);
 }
 
-.nav .nav-link::before{
+.nav .nav-link {
+    display: block;
+    padding: 0.5rem 1rem;
+}
+
+.nav .nav-link::before {
     content: "";
     position: absolute;
     top: 0;
@@ -165,20 +166,20 @@ a:active {
     height: 0.2rem;
 }
 
-.nav .nav-item:hover .nav-link::before{
+.nav .nav-item:hover .nav-link::before {
     background-color: var(--color-primary);
     width: 100%;
 }
 
-.section-hero{
+.section-hero {
     background-size: 90rem auto;
 }
 
-.section-hero .section-title{
+.section-hero .section-title {
     margin-bottom: 5rem;
 }
 
-.section-hero .section-inner{
+.section-hero .section-inner {
     padding: 10rem 40rem 2rem 0;
 }
 
@@ -202,7 +203,7 @@ a:active {
     text-decoration: none;
 }
 
-.card-title .card-services {
+.card-services .card-title {
     margin: 0;
 }
 
@@ -266,17 +267,17 @@ ul.row {
     margin: auto;
 }
 
-.card-testimonial{
+.card-testimonial {
     text-align: center;
 }
 
-.card-testimonial .card-avatar{
+.card-testimonial .card-avatar {
     border-radius: 50%;
     width: 10rem;
     height: 10rem;
 }
 
-.card-testimonial .card-quote cite{
+.card-testimonial .card-quote cite {
     display: block;
     padding-top: 1rem;
     color: var(--color-primary);
