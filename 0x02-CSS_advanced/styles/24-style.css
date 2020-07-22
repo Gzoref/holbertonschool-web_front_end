@@ -120,7 +120,7 @@ a:active {
 .card-services a{
     display: block;
     padding: 2rem;
-    background-color: var(--color-dark-grey);
+    background-color: var(--color-light-grey);
 }
 
 .card-services a:hover{
@@ -129,7 +129,7 @@ a:active {
     text-decoration: none;
 }
 
-.card-title  .card-services{
+ .card-services .card-title{
     margin: 0;
 }
 
@@ -181,7 +181,7 @@ ul.row {
 }
 
 
-.row:after {
+.row::after {
     content: "";
     display: table;
     clear: both;
@@ -204,7 +204,7 @@ ul.row {
 
 [class^='col-'] {
     float: left;
-    padding: 0.5;
+    padding: 0.5rem;
 }
 
 .footer ul {
