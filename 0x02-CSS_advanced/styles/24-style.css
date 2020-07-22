@@ -117,19 +117,19 @@ a:active {
     color: var(--color-primary);
 }
 
-.card-services a{
+.card-services a {
     display: block;
     padding: 2rem;
     background-color: var(--color-light-grey);
 }
 
-.card-services a:hover{
+.card-services a:hover {
     color: var(--color-white);
     background-color: var(--color-primary);
     text-decoration: none;
 }
 
- .card-services .card-title{
+.card-services .card-title {
     margin: 0;
 }
 
@@ -148,6 +148,7 @@ a:active {
 
 .section-footer {
     padding: var(--section-footer-padding);
+    text-align: var(--section-footer-align);
 }
 
 .section-title {
@@ -211,15 +212,15 @@ ul.row {
     text-align: right;
 }
 
-.footer-address{
+.footer-address {
     color: var(--text-color);
 }
 
-.social-link{
+.social-link {
     display: block;
 }
 
-.social-link > svg{
+.social-link>svg {
     fill: var(--text-color);
 }
 
