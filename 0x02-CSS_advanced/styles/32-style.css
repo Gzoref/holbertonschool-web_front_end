@@ -145,7 +145,7 @@ a:active {
     font-family: var(--nav-item-font-family);
     font-weight: var(--nav-item-font-weight);
     font-size: var(--nav-item-font-size);
-    line-height: var(--nav-item-letter-spacing);
+    letter-spacing: var(--nav-item-letter-spacing);
     display: var(--nav-item-display);
     margin: var(--nav-item-margin);
 }
@@ -230,7 +230,7 @@ a:active {
     left: -0.1rem;
     right: -0.1rem;
     z-index: 1;
-    transition: var(--transition-duration);
+    transition: var(--transition-duration) var(--transition-cubic-bezier);
 }
 
 .card-inner:hover {
@@ -336,7 +336,7 @@ ul.row {
 }
 
 
-.row:after {
+.row::after {
     content: "";
     display: table;
     clear: both;
