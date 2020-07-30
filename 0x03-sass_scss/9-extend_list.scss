@@ -1,0 +1,19 @@
+/*  Extend styles with import*/
+
+%message-shared {
+    font-size: 12px;
+}
+
+.info{
+    @extend %message-shared;
+}
+
+.sucess{
+    @extend .info;
+    color: #00FF00;
+}
+
+.warnings{
+    @extend .info;
+    color: #00FF00;
+}
