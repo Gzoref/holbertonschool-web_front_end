@@ -1,5 +1,6 @@
 /* Creates H* tags, where ‘*’ is the size of the font used. */
-@for $header-size from 1 through 5 {
+$types: 5;
+@for $header-size from 1 through $types {
     h#{$header-size} {
         font-size: #{$header-size}px;
     }
