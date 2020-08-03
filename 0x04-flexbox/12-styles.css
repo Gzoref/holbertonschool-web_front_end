@@ -435,6 +435,12 @@ ul.row {
 
 /* Header
       ============================= */
+.header {
+    padding: var(--header-padding);
+    position: relative;
+    z-index: 3;
+    background: transparent !important;
+}
 
 .header-container {
     display: flex;
@@ -442,12 +448,6 @@ ul.row {
     align-items: center;
 }
 
-.header {
-    padding: var(--header-padding);
-    position: relative;
-    z-index: 3;
-    background: transparent !important;
-}
 
 /* Footer
       ============================= */
@@ -718,51 +718,50 @@ ul.row {
 /* Section HERO (article)
     ============================= */
 
-    .hero-article{
-        background-size: 150rem 100rem;
-        background-position: 50% 0;
-    }
+.hero-article {
+    background-size: 150rem 100rem;
+    background-position: 50% 0;
+}
 
-    .hero-article::before{
-        content: "";
-        background: rgba(0, 0, 0, 0.8);
-        position: absolute;
-        top: 0;
-        right: 0;
-        left: 0;
-        bottom: 0;
-        z-index: 0;
-    }
+.hero-article::before {
+    content: "";
+    background: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 0;
+}
 
-    .hero-article .section-inner{
-        text-align: center;
-        align-items: center;
-        min-height: 40vh;
-    }
+.hero-article .section-inner {
+    text-align: center;
+    align-items: center;
+    min-height: 40vh;
+}
 
-    .hero-article .section-body{
-        position: relative;
-        padding: 7rem 0 0;
-        z-index: 2;
-    }
+.hero-article .section-body {
+    position: relative;
+    padding: 7rem 0 0;
+    z-index: 2;
+}
 
-    .main-article{
-        padding: 5rem 0;
-    }
+.main-article {
+    padding: 5rem 0;
+}
 
-    /* Post
+/* Post
     ============================= */
 
-    .post{
-        display: flex;
-    }
+.post {
+    display: flex;
+}
 
-    .post-content{
-        width: 100%;
-    }
+.post-content {
+    width: 100%;
+}
 
-    .post-aside{
-        order: -1;
-        min-width: 20%;
-    }
-
+.post-aside {
+    order: -1;
+    min-width: 20%;
+}
