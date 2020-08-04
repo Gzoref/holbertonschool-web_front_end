@@ -1,0 +1,47 @@
+.container {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+}
+
+.box {
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    justify-content: center;
+}
+
+.box1 {
+    width: 7rem;
+    height: 5rem;
+    background-color: rgb(143, 197, 143);
+    font-size: 2rem;
+}
+
+.box2 {
+    width: 8rem;
+    height: 6rem;
+    background-color: rgb(77, 166, 221);
+    font-size: 3rem;
+}
+
+.box3 {
+    width: 12rem;
+    height: 8rem;
+    background-color: rgb(101, 101, 211);
+    font-size: 4rem;
+}
+
+.box4 {
+    width: 8rem;
+    height: 6rem;
+    background-color: rebeccapurple;
+    font-size: 3rem;
+}
+
+.box5 {
+    width: 7rem;
+    height: 5rem;
+    background-color: orange;
+    font-size: 2rem;
+}
