@@ -874,7 +874,8 @@ form {
 
 fieldset {
     display: flex;
-    flex-direction: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
     border: none;
     padding: 0 0 2rem;
 }
@@ -1012,6 +1013,7 @@ textarea:valid:not(:placeholder-shown) {
     position: relative;
 
 }
+
 .form-search .search-button {
 
     display: inline-block;
@@ -1021,6 +1023,7 @@ textarea:valid:not(:placeholder-shown) {
     padding: 0;
 
 }
+
 .search-button .search-icon {
 
     fill: var(--color-white);
@@ -1028,6 +1031,7 @@ textarea:valid:not(:placeholder-shown) {
     height: 1.5rem;
 
 }
+
 .form-search input[type="search"] {
 
     display: inline-block;
