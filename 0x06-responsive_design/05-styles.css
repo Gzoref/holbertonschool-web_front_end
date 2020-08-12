@@ -631,7 +631,7 @@ header .menu-icon .navicon::after{
 
 .hero-homepage {
     background-image: url(images/banner-home.jpg);
-    background-position: 65% 8;
+    background-position: 65% 8rem;
     background-repeat: no-repeat;
     background-size: 90rem auto;
 }
