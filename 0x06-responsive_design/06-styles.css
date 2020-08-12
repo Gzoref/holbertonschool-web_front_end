@@ -484,7 +484,7 @@ ul.row {
         display: none;
     }
 
-    header .nav {
+    .header .nav {
         flex-direction: column;
         overflow: hidden;
         max-height: 0;
