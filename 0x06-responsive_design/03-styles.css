@@ -597,6 +597,13 @@ ul.row {
     margin-top: -8.5rem;
 }
 
+.hero-homepage {
+    background-image: url(images/banner-home.jpg);
+    background-position: 65% 8;
+    background-repeat: no-repeat;
+    background-size: 90rem auto;
+}
+
 .section-hero .section-body {
     padding: 10rem 4rem;
 }
