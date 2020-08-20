@@ -356,6 +356,7 @@ a:active {
   opacity: 0;
   top: 0;
   z-index: 10;
+  transform: translateY(-1rem);
   transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
 }
 
