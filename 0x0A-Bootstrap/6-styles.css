@@ -8,7 +8,11 @@
 }
 
 .btn-outline-primary{
-	color: #E0003C;
+	border: 1px solid #e0003c;
+}
+
+.btn-outline-primary {
+  color: #e0003c;
 }
 
 a {
@@ -19,20 +23,20 @@ a:hover {
   color: #e0003c;
 }
 
-
-
 .card,
 .card-header,
 .card-footer {
+  border: 1px solid #e0003c;
   border-radius: 1rem;
 }
 
-.card-header{
-	background-color: #E0003C;
-	color: #ffffff;
-	
+.card .card-header {
+  background-color: #e0003c;
+  color: #ffffff;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
 }
 
-.text-muted{
-	color: #8C8C8C;
+.text-muted {
+  color: #8c8c8c;
 }
