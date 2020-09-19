@@ -33,4 +33,4 @@ setTimeout(function () {
   console.log(
     `Execution time of printing countPrimeNumbers was ${time} milliseconds`
   );
-});
+}, 0);
