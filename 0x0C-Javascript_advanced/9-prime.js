@@ -12,10 +12,12 @@ function countPrimeNumbers() {
 
 const time0 = performance.now();
 
-const result = countPrimeNumbers();
-
+for (let index = 0; index < 100; index++) {
+	countPrimeNumbers();
+}
 
 const time1 = performance.now();
 
-console.log(`Number of primes between 2-100: ${result}`);
-console.log(`Execution time of printing countPrimeNumbers was ${time1 - time0} milliseconds`);
+const time = time1 - time0;
+
+console.log(`Execution time of printing countPrimeNumbers was ${time} milliseconds`);
