@@ -1,12 +1,21 @@
 function countPrimeNumbers() {
   let numberOfPrimes = 0;
+  let isPrime = true;
 
   for (let index = 2; index <= 100; index++) {
-    if (100 % index == 0) {
+    isPrime = true;
+    let limit = Math.round(Math.sqrt(index));
+
+    for (let mod = 2; mod <= limit; mod++) {
+      if (index % mod == 0) {
+        isPrime = false;
+        break;
+      }
+    }
+    if (isPrime) {
       numberOfPrimes++;
     }
   }
-  console.log(numberOfPrimes);
   return numberOfPrimes;
 }
 
