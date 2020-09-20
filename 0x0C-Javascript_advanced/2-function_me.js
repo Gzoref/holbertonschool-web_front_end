@@ -1,5 +1,5 @@
 function welcomeMessage(fullName) {
-  alert("Welcome " + fullName);
+  alert(`Welcome ${fullName}`);
 }
 
 guillaume = function () {

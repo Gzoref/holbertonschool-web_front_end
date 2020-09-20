@@ -11,7 +11,7 @@ function outer() {
     inception();
 
     function inception() {
-      alert(globalVariable + ' ' + course + exclamation);
+      alert(`${globalVariable} ${course} ${exclamation}`);
 
       inner();
       outer();
