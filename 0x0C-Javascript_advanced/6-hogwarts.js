@@ -6,20 +6,19 @@ function studentHogwarts() {
     privateScore += points;
   }
 
-  this.setName = function (newName) {
-    name = newName;
-  };
-
-  this.rewardStudent = function () {
-    changeScoreBy(1);
-  };
-
-  this.penalizeStudent = function () {
-    changeScoreBy(-1);
-  };
-
-  this.getScore = function () {
-    return name + ": " + privateScore;
+  return {
+    setName: function (newName) {
+      name = newName;
+    },
+    rewardStudent: function () {
+      changeScoreBy(1);
+    },
+    penalizeStudent: function () {
+      changeScoreBy(-1);
+    },
+    getScore: function () {
+      return `${name}: ${privateScore}`;
+    }
   };
 }
 
