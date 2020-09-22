@@ -6,7 +6,7 @@ function outer() {
   inner();
 
   function inner() {
-    alert(globalVariable + ' ' + course);
+    alert(`${globalVariable} ${course}`);
     const exclamation = "!";
     inception();
 
