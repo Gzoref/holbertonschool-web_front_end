@@ -16,7 +16,7 @@
 			$('body').append('<input type="text"><input type="submit">', '<ul></ul>');
 
 			$(':submit').click(function () {
-				const submit = $(':text').first().val();
+				const submit = $(':text').val();
 				queryWikipedia(submit);
 			});
 		}
