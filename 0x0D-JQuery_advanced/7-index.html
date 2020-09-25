@@ -22,23 +22,30 @@
 		}
 
 		function addNewArticle(id, title, snippet) {
-			$('ul').append('<li> <p> <span>' + id + '-</span><b>' + title + '</b> </p> <p>' + snippet + '</p> </li>')
+			$('ul').append('<li> <p> <span>' + id + ' - </span><b>' + title + '</b> </p> <p>' + snippet + '</p> </li>')
 		}
 
 		function queryWikipedia(search) {
 			const url = 'https://en.wikipedia.org/w/api.php';
-
-			$.get(url, {
+			const data = {
 				action: "query",
 				list: "search",
 				srsearch: "search",
 				format: "json",
-				origin: '*'
-			}).done(function (data) {
-				data.query.search.forEach(function (result) {
-					addNewArticle(result.pageid, result.title, result.snippet);
-				})
-			});
+				origin: '*',
+			}
+
+			$.ajax({
+				url: url,
+				data: data,
+				crossDomain: true,
+				success: function (res) {
+					const result = res.query.search;
+					for (let i in result)
+						addNewArticle(i.pageid, i.title, i.snippet);
+				}
+			}
+			)
 		}
 
 		createSearchForm();
