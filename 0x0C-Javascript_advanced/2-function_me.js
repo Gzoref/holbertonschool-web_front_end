@@ -2,14 +2,11 @@ function welcomeMessage(fullName) {
   alert(`Welcome ${fullName}`);
 }
 
-guillaume = function () {
-  welcomeMessage("Guillaume");
-};
+const guillaume = welcomeMessage("Guillaume");
 
-alex = function () {
-  welcomeMessage("Alex");
-};
 
-fred = function () {
-  welcomeMessage("Fred");
-};
+const alex = welcomeMessage("Alex");
+
+
+const fred =  welcomeMessage("Fred");
+
