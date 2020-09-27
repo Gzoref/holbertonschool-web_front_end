@@ -19,11 +19,11 @@
 			const title = data.title;
 			const author = data.author;
 
-			$('body').append('<p><span>Post created with id' +  id + 'title:' + title + ', author' + author + '</span></p>');
+			$('body').append('<p><span>Post created with id ' +  id + ' title:' + title + ',author ' + author + ' </span></p>');
 		}
 
 		function listPosts() {
-			$.get('http://127.0.0.1/posts').then(function (data) {
+			$.get('http://127.0.0.1:3000/posts').then(function (data) {
 				for (let resp in data) {
 					addPostRow(resp);
 				}
