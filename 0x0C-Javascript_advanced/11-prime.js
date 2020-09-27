@@ -22,7 +22,7 @@ function countPrimeNumbers() {
 const time0 = performance.now();
 
 for (let index = 0; index < 100; index++) {
-  countPrimeNumbers();
+  setTimeout(countPrimeNumbers, 0);
 }
 
 const time1 = performance.now();
@@ -31,6 +31,6 @@ const time = time1 - time0;
 
 setTimeout(function () {
   console.log(
-    `Execution time of printing countPrimeNumbers was ${time} milliseconds`
+    `Execution time of calculating prime numbers 100 times was ${time} millisecons`
   );
 }, 0);
