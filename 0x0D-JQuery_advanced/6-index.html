@@ -22,9 +22,9 @@
 		//		$('table').find('tbody').first().append('<tr><td>' + firstName + '</td><td>' + lastName + '</td> <td>(X)</td></tr>');
 
 		if (position === 'before') {
-			$('body').find('tbody').first().prepend('<tr><td>' + firstName + '</td><td>' + lastName + '</td> <td>(X)</td></tr>');
+			$('body').find('tbody').first().prepend(`<tr><td>${firstName}</td><td>${lastName}</td> <td>(X)</td></tr>`);
 		} else {
-			$('body').find('tbody').first().append('<tr><td>' + firstName + '</td><td>' + lastName + '</td> <td>(X)</td></tr>');
+			$('body').find('tbody').first().append(`<tr><td>${firstName}</td><td>${lastName}</td> <td>(X)</td></tr>`);
 		}
 
 		const check = $('tbody').find('tr').last();
