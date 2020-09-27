@@ -22,7 +22,7 @@
 		}
 
 		function addNewArticle(id, title, snippet) {
-			$('ul').append('<li> <p> <span>' + id + ' - </span><b>' + title + '</b> </p> <p>' + snippet + '</p> </li>')
+			$('ul').append(`<li> <p> <span> ${id} - </span><b> ${title}</b> </p> <p>${snippet}</p> </li>`)
 		}
 
 		function queryWikipedia(search) {
