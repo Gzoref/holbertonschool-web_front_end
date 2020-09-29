@@ -17,17 +17,15 @@
 
 	function setCookies(){
 		const firstName = document.getElementById('firstname').value; 
-		document.cookie = `firstname ${firstName}`;
+		document.cookie = `firstname=${firstName}`;
 
 		const email = document.getElementById('email').value; 
-		document.cookie = `email ${email}`;
+		document.cookie = `email=${email}`;
 	}
 
 	function showCookies(){
-		const cookie = document.cookie;
-		const text = document.createTextNode(`Cookies: ${cookie}`)
 		const p = document.createElement('p');
-		p.appendChild(text);
+		p.textContent = `Cookies: ${document.cookie}`;
 		document.body.appendChild(p);
 	}
 
