@@ -24,11 +24,13 @@
 
 		function listPosts() {
 			$.get('http://127.0.0.1:3000/posts').then(function (data) {
-				for (let resp in data) {
-					addPostRow(resp);
-				}
+				data.forEach(function (res) {
+					addPostRow(res)
+				})
+
+			}).fail(function () {
+				alert('Server error')
 			})
-			alert('Server error')
 		}
 
 		function buildForm() {
@@ -43,12 +45,14 @@
 				author: $('#author').val()
 			}
 
-			$.post('http://127.0.0.1:3000/posts').then(function (data) {
+			$.post('http://127.0.0.1:3000/posts', data).then(function (req) {
 				for (let resp in data) {
 					addPostRow(resp);
 				}
-			})
-			alert('Error sending the POST query')
+			}).fail(function () {
+				alert('Error sending the POST query');
+			});
+
 		}
 
 		buildForm();
