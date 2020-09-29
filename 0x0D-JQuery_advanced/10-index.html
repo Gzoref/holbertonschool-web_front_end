@@ -10,7 +10,6 @@
 
 <body>
 
-
 	<script type="application/javascript">
 
 		function addPostRow(data) {
@@ -24,9 +23,10 @@
 
 		function listPosts() {
 			$.get('http://127.0.0.1:3000/posts').then(function (data) {
-				for (let resp in data) {
-					addPostRow(resp);
-				}
+				data.forEach(function (res) {
+					addPostRow(res)
+				})
+
 			}).fail(function () {
 				alert('Server error')
 			})
