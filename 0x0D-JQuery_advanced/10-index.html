@@ -19,7 +19,7 @@
 			const title = data.title;
 			const author = data.author;
 
-			$('body').append('<p><span>Post created with id ' +  id + ' title:' + title + ',author ' + author + ' </span></p>');
+			$('body').append('<p><span>Post created with id ' + id + ' title:' + title + 'author ' + author + ' </span></p>');
 		}
 
 		function listPosts() {
@@ -27,11 +27,12 @@
 				for (let resp in data) {
 					addPostRow(resp);
 				}
+			}).fail(function () {
+				alert('Server error')
 			})
-			alert('Server error')
 		}
-	
-			listPosts();
+
+		listPosts();
 	</script>
 
 </body>
