@@ -22,11 +22,12 @@
 		}
 
 		function addNewArticle(id, title, snippet) {
-			$('ul').append('<li> <p> <span>' + id + ' - </span><b>' + title + '</b> </p> <p>' + snippet + '</p> </li>')
+			$('ul').append(`<li> <p> <span> ${id} - </span><b> ${title}</b> </p> <p>${snippet}</p> </li>`)
 		}
 
 		function queryWikipedia(search, offset = 0) {
 			const url = 'https://en.wikipedia.org/w/api.php';
+			
 			const data = {
 				action: "query",
 				list: "search",
@@ -42,8 +43,9 @@
 				success: function (res) {
 					const result = res.query.search;
 					for (let i in result) {
+						const totalHits = res.query.searchinfo.totalhits;
 						addNewArticle(result[i].pageid, result[i].title, result[i].snippet);
-						buildPagination(result[i].totalhits, 10, offset);
+						buildPagination(totalHits, 10, offset);
 					}
 				}
 			}
@@ -51,24 +53,24 @@
 		}
 
 		function buildPagination(numberOfItems, itemsPerPage, currentOffset) {
-			for (let index = 1; index <= (numberOfItems / itemsPerPage); index++) {
-				$('#pagination').append('<li><a>' + index);
-				$('a').last().addClass('' + i + '');
+			$("#pagination").empty();
+			for (let i = 1; i <= (numberOfItems / itemsPerPage); i++) {
+			  let $li = $("<li></li>").html(i);
+			  $li.css({"display": "inline",  "cursor": "pointer", "margin-left": "10px"});
+			  if (currentOffset === itemsPerPage * (i - 1)) {
+				$li.css("font-weight", "bold");
+			  }
+			  $("#pagination").append($li);
 			}
-			$('#pagination li').css({
-				cursor: 'pointer',
-				'margin-left': '10px',
-				display: 'inline',
-			});
-			$(`#pagination li a.${currentOffset}`).css('font-weight', 'bold');
 			$('a').click(function () {
 				$('#pagination').empty();
 				$("ul").first().empty();
 				queryWikipedia($(':text').val(), this.innerHTML);
 			});
-		}
+		  }
 
 		createSearchForm();
+	
 	</script>
 </body>
 
