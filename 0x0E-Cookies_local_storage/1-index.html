@@ -26,9 +26,6 @@
 		}
 
 		function showCookies() {
-			const cookie = document.cookie;
-			const text = document.createTextNode(`Cookies: ${cookie}`)
-
 			const p = document.createElement('p');
 			p.textContent = `Cookies: ${document.cookie}`;
 			document.body.appendChild(p);
