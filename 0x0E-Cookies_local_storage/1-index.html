@@ -18,24 +18,19 @@
 	<script type="application/javascript">
 
 		function setCookies() {
-			let today = new Date();
-			let expirationDate = new Date(today);
-
-			expirationDate.setDate(today.getDate() + 10);
-			expirationDate = expirationDate.toUTCString();
-
 			const firstName = document.getElementById('firstname').value;
-			document.cookie = `firstname ${firstName}\nExpires ${expirationDate}`;
+			document.cookie = `firstname=${firstName};max-age=864000`;
 
 			const email = document.getElementById('email').value;
-			document.cookie = `email ${email}`;
+			document.cookie = `email=${email};max-age=864000`;
 		}
 
 		function showCookies() {
 			const cookie = document.cookie;
 			const text = document.createTextNode(`Cookies: ${cookie}`)
+
 			const p = document.createElement('p');
-			p.appendChild(text);
+			p.textContent = `Cookies: ${document.cookie}`;
 			document.body.appendChild(p);
 		}
 
