@@ -18,35 +18,36 @@
 	<script type="application/javascript">
 
 		function setCookies() {
-			let today = new Date();
-			let expirationDate = new Date(today);
-
-			expirationDate.setDate(today.getDate() + 10);
-			expirationDate = expirationDate.toUTCString();
-
 			const firstName = document.getElementById('firstname').value;
-			document.cookie = `firstname ${firstName}\nExpires ${expirationDate}`;
+			document.cookie = `firstname=${firstName};max-age=864000`;
 
 			const email = document.getElementById('email').value;
-			document.cookie = `email ${email}`;
+			document.cookie = `email=${email};max-age=864000`;
 		}
 
 		function showCookies() {
-			const firstName = getCookie('firstName');
+			const firstName = getCookie('firstname');
 			const email = getCookie('email');
 
-			const cookie = document.cookie;
-			const text = document.createTextNode(`Email: ${email} - Firstname: ${firstName}`)
 			const p = document.createElement('p');
-
-			p.appendChild(text);
+			p.textContent = `Email: ${email} - Firstname: ${firstName}`;
 			document.body.appendChild(p);
 		}
 
-		function getCookie(name){
-			const cookieValue = document.cookie;
-			console.log(cookieValue)
-			return cookieValue;
+		function getCookie(name) {
+			const firstName = name + "=";
+			const decodedCookie = decodeURIComponent(document.cookie);
+			const ca = decodedCookie.split(';');
+			for(let i = 0; i < ca.length; i++) {
+			  let c = ca[i];
+			  while (c.charAt(0) == ' ') {
+				c = c.substring(1);
+			  }
+			  if (c.indexOf(name) == 0) {
+				return c.substring(firstName.length, c.length);
+			  }
+			}
+			return "";
 		}
 
 	</script>
